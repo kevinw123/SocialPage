@@ -1,6 +1,14 @@
 var testApp = angular.module('testApp', []);
 testApp.controller('PostController', function PostController($scope) {
-  $scope.phones = [
+
+  $scope.addPost = function(){
+  	$scope.posts.unshift({
+  		username: 'kevs',
+  		body: 'new post!'
+  	})
+  };
+
+  $scope.posts = [
     {
       username: 'jeffx',
       body: 'Fast just got faster with Nexus S.'
