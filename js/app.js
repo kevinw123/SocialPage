@@ -2,10 +2,13 @@ var testApp = angular.module('testApp', []);
 testApp.controller('PostController', function PostController($scope) {
 
   $scope.addPost = function(){
-  	$scope.posts.unshift({
-  		username: 'kevs',
-  		body: 'new post!'
-  	})
+  	if($scope.postBody){
+  		$scope.posts.unshift({
+  			username: 'kevs',
+  			body: $scope.postBody
+  		})
+  	}
+  	$scope.postBody = null
   };
 
   $scope.posts = [

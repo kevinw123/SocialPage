@@ -8,6 +8,7 @@
 <body ng-controller="PostController">
 	<div class ="container">
 		<h1>Recent Posts</h1>
+		<input ng-model='postBody' class='form-control'/>
 		<button ng-click='addPost()' class='btn btn-default'> Add Post </button>
 		<ul class="list-group">
 			<li ng-repeat="post in posts" class="list-group-item">
